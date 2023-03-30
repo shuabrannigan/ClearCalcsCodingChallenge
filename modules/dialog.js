@@ -27,9 +27,7 @@ class DialogComponent {
              * handle 'cancel' event caused when hitting 'escape' key
              */
             this.dialog.addEventListener('cancel', (event) => {
-                response.data = false
-                resolve(response)
-                this._destroy()
+                event.preventDefault()
             });
 
             /**
